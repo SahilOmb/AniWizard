@@ -20,51 +20,29 @@
 
 ```text
 moviereview/
-├── backend/                                   # Spring Boot Enterprise API
-│   ├── src/main/java/com/movie/moviereview/   # Java Application Controllers & Models
-│   │   ├── MongoTestRunner.java               # Database connectivity runner
-│   │   ├── Movie.java                         # Data schema for movies
-│   │   ├── MovieService.java                  # Movie business logic layer
-│   │   ├── MovieController.java               # API endpoints for /api/v1/movies
-│   │   ├── Reviews.java                       # Data schema for reviews
-│   │   ├── ReviewService.java                 # Review business logic layer
-│   │   ├── ReviewRepo.java                    # MongoRepository interface for reviews
-│   │   └── ReviewController.java              # API endpoints for /api/v1/reviews
-│   └── src/main/resources/                    # Configurations & properties file
-│       └── application.properties             # Database connection profiles
+├── backend/                                   # Spring Boot Core REST API
+│   ├── MongoTestRunner.java                   # Database connectivity tester
+│   ├── Movie.java                             # Movie schema entity model
+│   ├── MovieController.java                   # Endpoints mapping for /api/v1/movies
+│   ├── MovieRepository.java                   # MongoDB repository framework interface
+│   ├── MoviereviewApplication.java            # Main Spring Boot execution class
+│   ├── MovieService.java                      # Service layer processing movies logic
+│   ├── ReviewController.java                  # Endpoints mapping for /api/v1/reviews
+│   ├── ReviewRepo.java                        # MongoDB repository framework interface
+│   ├── ReviewService.java                     # Service layer processing reviews logic
+│   └── Reviews.java                           # Review schema entity model
 │
-├── frontend/                                  # React UI Application
-│   └── src/                                   # Frontend Component Core
-│       ├── api/
-│       │   └── axiosConfig.js                 # Centralized Axios client for API fetching
-│       ├── components/                        # Modular UI architecture
-│       │   ├── header/                        # Global navigation header component
-│       │   │   └── Header.js
-│       │   ├── hero/                          # High-impact media carousel/slider
-│       │   │   ├── Hero.js
-│       │   │   └── Hero.css
-│       │   ├── home/                          # Landing layout container view
-│       │   │   └── Home.js
-│       │   ├── Review/                        # Granular review metadata
-│       │   │   └── ReviewInfo.js
-│       │   ├── reviews/                       # Comprehensive commentary layout
-│       │   │   └── Reviews.js
-│       │   ├── trailer/                       # Embedded video trailer display
-│       │   │   ├── Trailer.js
-│       │   │   └── Trailer.css
-│       │   └── Layout.js                      # Central application shell template
-│       │
-│       ├── App.js                             # Base application router
-│       ├── App.css                            # Core client view design templates
-│       ├── index.js                           # Web virtual DOM compiler node
-│       ├── index.css                          # Primary global variable layout styles
-│       └── logo.svg                           # Application branding vector graphic
+├── frontend/                                  # React Dynamic Web UI Client
+│   ├── App.js                                 # Main client component router engine
+│   ├── App.css                                # Primary custom layouts styling rule
+│   ├── index.js                               # Root DOM injection rendering point
+│   ├── index.css                              # Global CSS standard rule variables
+│   └── logo.svg                               # Interface branding application icon
 │
-└── README.md                                  # Complete documentation profile
+└── README.md                                  # Repository documentation manual
 ```
 
 ⚡ Quick Start
-
 
 1. Backend Setup
 
@@ -83,4 +61,4 @@ cd frontend
 npm install
 npm start
 Use code with caution.
-The application will run locally at http://localhost:3000.
+The application will run locally at "http://localhost:3000".
