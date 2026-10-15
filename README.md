@@ -16,6 +16,52 @@
 • Database: MongoDB, Spring Data MongoDB (High-performance NoSQL document storage)
 • APIs: External Media Integrations (Real-time cast data, poster art, and schedules)
 
+# 📂 Project Structure
+
+```text
+moviereview/
+├── backend/                                   # Spring Boot Enterprise API
+│   ├── src/main/java/com/movie/moviereview/   # Java Application Controllers & Models
+│   │   ├── MongoTestRunner.java               # Database connectivity runner
+│   │   ├── Movie.java                         # Data schema for movies
+│   │   ├── MovieService.java                  # Movie business logic layer
+│   │   ├── MovieController.java               # API endpoints for /api/v1/movies
+│   │   ├── Reviews.java                       # Data schema for reviews
+│   │   ├── ReviewService.java                 # Review business logic layer
+│   │   ├── ReviewRepo.java                    # MongoRepository interface for reviews
+│   │   └── ReviewController.java              # API endpoints for /api/v1/reviews
+│   └── src/main/resources/                    # Configurations & properties file
+│       └── application.properties             # Database connection profiles
+│
+├── frontend/                                  # React UI Application
+│   └── src/                                   # Frontend Component Core
+│       ├── api/
+│       │   └── axiosConfig.js                 # Centralized Axios client for API fetching
+│       ├── components/                        # Modular UI architecture
+│       │   ├── header/                        # Global navigation header component
+│       │   │   └── Header.js
+│       │   ├── hero/                          # High-impact media carousel/slider
+│       │   │   ├── Hero.js
+│       │   │   └── Hero.css
+│       │   ├── home/                          # Landing layout container view
+│       │   │   └── Home.js
+│       │   ├── Review/                        # Granular review metadata
+│       │   │   └── ReviewInfo.js
+│       │   ├── reviews/                       # Comprehensive commentary layout
+│       │   │   └── Reviews.js
+│       │   ├── trailer/                       # Embedded video trailer display
+│       │   │   ├── Trailer.js
+│       │   │   └── Trailer.css
+│       │   └── Layout.js                      # Central application shell template
+│       │
+│       ├── App.js                             # Base application router
+│       ├── App.css                            # Core client view design templates
+│       ├── index.js                           # Web virtual DOM compiler node
+│       ├── index.css                          # Primary global variable layout styles
+│       └── logo.svg                           # Application branding vector graphic
+│
+└── README.md                                  # Complete documentation profile
+```
 
 ⚡ Quick Start
 
